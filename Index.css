@@ -113,3 +113,7 @@ body {
     font-size: large;
     position: absolute;
 }
+
+#dynamicList button:hover {
+    background-color: rebeccapurple;
+}

@@ -7,7 +7,7 @@ function newElement () {
     button.classList.add("close");
     button.innerHTML = "X";
     if (input.value.length >= 2) {
-        let li = document.createElement("li");
+        var li = document.createElement("li");
         li.setAttribute("id", input.value);
         li.appendChild(img);
         li.appendChild(document.createTextNode(input.value));
@@ -38,11 +38,9 @@ function search() {
     }
   }
 
-    let close = document.getElementsByClassName("close");
-    let z;
-    for (z = 0; z < close.length; z++) {
-    close[z].onclick = function closeList() {
-        var list = this.parentElement;
-        list.style.display = "none";
-    }
-    }
+    let closeBtn = document.getElementsByClassName("close");
+      console.log(closeBtn);
+    closeBtn.addEventListener("click", () => {
+      console.log(closeBtn);
+      this.parentElement.style.display = 'none';
+    }); 
