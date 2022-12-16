@@ -10,9 +10,9 @@
 <body>
     <div class="mainDiv">
         <input type="text" placeholder="Emri" class="nameInput" id="input" minlength="2">
-        <select name="Job" class="jobSelector">
-            <option value="Student">Student</option>
-            <option value="Mësues">Mësues</option>
+        <select name="Job" onclick="selectedValue()" class="jobSelector">
+            <option class="student" value="Student">Student</option>
+            <option class="mesues" value="Mësues">Mësues</option>
         </select>
         <input type="submit" value="+ Shto" class="addButton" onclick="newElement()">
         <hr style="margin-top: 25px; width: 670px;">
@@ -20,6 +20,7 @@
         <ul id="dynamicList" style="list-style: none;">
         </ul>
     </div>
+    
 </body>
 <script src="Index.js"></script>
 </html>

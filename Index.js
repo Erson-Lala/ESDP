@@ -1,24 +1,56 @@
+let ul = document.getElementById("dynamicList");
+
+let allItems;
+if (localStorage.getItem("items")) {
+  allItems = JSON.parse(localStorage.getItem("items"));
+} else {
+  allItems = [];
+}
+
+
 function newElement () {
-    let ul = document.getElementById("dynamicList");
+    
     let input = document.getElementById("input");
-    let img = document.createElement("img")
-    img.src = "Avatar.png";
-    let button = document.createElement("button");
-    button.classList.add("close");
-    button.innerHTML = "X";
+    let item = {
+      input: input.value,
+      img: "Avatar.png",
+      job: selectedValue()
+    }
     if (input.value.length >= 2) {
-        var li = document.createElement("li");
-        li.setAttribute("id", input.value);
-        li.appendChild(img);
-        li.appendChild(document.createTextNode(input.value));
-        li.appendChild(button);
-        ul.appendChild(li);
+        allItems.push(item);
+        localStorage.setItem("items", JSON.stringify(allItems));
+        showData();
+        input.value= "";
     }
     else {
         alert("The input must have at least 2 characters");
     }
-
 }
+
+function showData() {
+  let items = "";
+  for(let i=0; i< allItems.length;i++) {
+    items+= `
+    <li id="${allItems[i].input}">
+    <img src="${allItems[i].img}"/>
+    <div class="text">
+    <p>${allItems[i].input}</p>
+    <p>${allItems[i].job}</p>
+    </div>
+    <button class="close" onclick="deleted(${i})">X<button/>
+    </li>
+    `
+  }
+  ul.innerHTML = items;
+}
+
+showData();
+
+function selectedValue () {
+  let jobs = document.querySelector(".jobSelector").value;
+  return jobs;
+}
+
 
 function search() {
     let searchInput, filter, ul, li, i, txtValue;
@@ -38,9 +70,8 @@ function search() {
     }
   }
 
-    let closeBtn = document.getElementsByClassName("close");
-      console.log(closeBtn);
-    closeBtn.addEventListener("click", () => {
-      console.log(closeBtn);
-      this.parentElement.style.display = 'none';
-    }); 
+  function deleted(i) {
+    allItems.splice(i, 1);
+    localStorage.setItem("items", JSON.stringify(allItems));
+    showData();
+  }

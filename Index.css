@@ -101,7 +101,7 @@ body {
     border-radius: 50px;
 }
 
-#dynamicList button {
+#dynamicList .close {
     height: 30px;
     width: 30px;
     border-radius: 50px;
@@ -114,6 +114,16 @@ body {
     position: absolute;
 }
 
+#dynamicList p {
+  margin: 0;
+}
+
+
 #dynamicList button:hover {
     background-color: rebeccapurple;
 }
+
+#dynamicList button:last-child {
+  display: none;
+}
+
