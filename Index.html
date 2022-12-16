@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+    <div class="mainDiv">
+        <input type="text" placeholder="Emri" class="nameInput" id="input" minlength="2">
+        <select name="Job" class="jobSelector">
+            <option value="Student">Student</option>
+            <option value="Mësues">Mësues</option>
+        </select>
+        <input type="submit" value="+ Shto" class="addButton" onclick="newElement()">
+        <hr style="margin-top: 25px; width: 670px;">
+        <input type="text" placeholder="Kërko" id="searchInput" class="search" onkeyup="search()">
+        <ul id="dynamicList" style="list-style: none;">
+        </ul>
+    </div>
+</body>
+<script src="Index.js"></script>
+</html>

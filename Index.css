@@ -1,0 +1,115 @@
+body {
+    background-image: linear-gradient(to right, #0C426F, #04C9FF);
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.mainDiv {
+    background-color: white;
+    padding-top: 20px;
+    width: 700px;
+    height: 100vh;
+    padding-left: 20px;
+}
+
+.addButton {
+    background-color: #3C7CEA;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60px;
+    height: 24px;
+    margin-left: 5px;
+}
+
+.addButton:hover {
+    background-color:#003fac;
+}
+
+.formSubmiter {
+    margin-left: 15px;
+
+}
+
+.jobSelector {
+    border-radius: 7px;
+    height: 25px;
+    border: rgbrgb(121, 121, 121), 1px;
+    color: black;
+}
+
+.jobSelector option {
+    background-color: #57535D;
+    color: white;
+}
+
+.jobSelector:hover {
+    background-color: rgb(226, 226, 222);
+}
+
+.nameInput {
+    height: 21px;
+    border-radius: 7px;
+    border: 1px, rgb(121, 121, 121);
+    border-width: 1px;
+    margin-left: 12px;
+    padding-left: 5px;
+}
+
+.nameInput:hover{
+    background-color: rgb(226, 226, 222);
+}
+
+.search {
+    margin-top: 20px;
+    margin-left: 15px;
+    border-radius: 7px;
+    border-width: 1px;
+    height: 21px;
+    padding-left: 5px;
+}
+
+.search:hover{
+    background-color: rgb(226, 226, 222);
+}
+
+#dynamicList{
+    padding-left: 15px;
+}
+
+#dynamicList li {
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 650px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px rgb(216, 216, 216);
+}
+
+#dynamicList li:hover{
+    background-color: rgb(226, 226, 222);
+}
+
+#dynamicList img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+#dynamicList button {
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    background-color: #E10001;
+    border: none;
+    color: white;
+    margin-left: 600px;
+    font-weight: 800;
+    font-size: large;
+    position: absolute;
+}
